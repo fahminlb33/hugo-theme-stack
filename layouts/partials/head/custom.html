@@ -1,0 +1,58 @@
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png" />
+<link rel="manifest" href="/img/favicon/manifest.webmanifest" />
+<meta name="msapplication-TileColor" content="#ffffff" />
+<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png" />
+<meta name="theme-color" content="#ffffff" />
+
+<!-- Google AdSense -->
+{{ with .Site.Params.integrations.googleAdsense }}
+<script async data-ad-client="ca-pub-{{ . }}" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+{{ end }}
+
+<!-- Google Analytics -->
+{{ with .Site.Params.integrations.googleAnalytics }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    window.dataLayer.push(arguments);
+  }
+
+  gtag('js', new Date());
+  gtag('config', '{{ . }}');
+</script>
+{{ end }}
+
+<!-- Google Seach Console -->
+{{ with .Site.Params.integrations.googleSiteVerification }}
+<meta name="google-site-verification" content="{{ . }}" />
+{{ end }}
+
+<!-- Microsoft Clarity -->
+{{ with .Site.Params.integrations.microsoftClarity }}
+<script async src="https://www.clarity.ms/tag/{{ . }}"></script>
+<script>
+  window["clarity"] = window["clarity"] || function () { (window["clarity"].q = window["clarity"].q || []).push(arguments) };
+</script>
+{{ end }}
+
+<!-- Mailchimp Signup -->
+{{ with .Site.Params.integrations.mailchimpSignup }}
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/{{ . }}.js");</script>
+{{ end }}
+
+<!-- Mermaid -->
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js" integrity="sha512-yD6UxqB1PGCP/nC8vd2pcozgicMkT/FEFo98T0ian+EtJPkbAL+h5gYV3r5Fpy1XWTVdDVoHx/E/9fFHdrHu1g==" crossorigin="anonymous" referrerpolicy="no-referrer" onload="mermaid.initialize({ startOnLoad: true });"></script>
