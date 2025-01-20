@@ -17,6 +17,11 @@
 <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png" />
 <meta name="theme-color" content="#ffffff" />
 
+<!-- Google Seach Console -->
+{{ with .Site.Params.integrations.googleSiteVerification }}
+<meta name="google-site-verification" content="{{ . }}" />
+{{ end }}
+
 <!-- Google AdSense -->
 {{ with .Site.Params.integrations.googleAdsense }}
 <script async data-ad-client="ca-pub-{{ . }}" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -36,11 +41,6 @@
 </script>
 {{ end }}
 
-<!-- Google Seach Console -->
-{{ with .Site.Params.integrations.googleSiteVerification }}
-<meta name="google-site-verification" content="{{ . }}" />
-{{ end }}
-
 <!-- Microsoft Clarity -->
 {{ with .Site.Params.integrations.microsoftClarity }}
 <script async src="https://www.clarity.ms/tag/{{ . }}"></script>
@@ -48,11 +48,3 @@
   window["clarity"] = window["clarity"] || function () { (window["clarity"].q = window["clarity"].q || []).push(arguments) };
 </script>
 {{ end }}
-
-<!-- Mailchimp Signup -->
-{{ with .Site.Params.integrations.mailchimpSignup }}
-<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/{{ . }}.js");</script>
-{{ end }}
-
-<!-- Mermaid -->
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js" integrity="sha512-yD6UxqB1PGCP/nC8vd2pcozgicMkT/FEFo98T0ian+EtJPkbAL+h5gYV3r5Fpy1XWTVdDVoHx/E/9fFHdrHu1g==" crossorigin="anonymous" referrerpolicy="no-referrer" onload="mermaid.initialize({ startOnLoad: true });"></script>

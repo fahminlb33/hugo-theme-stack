@@ -8,7 +8,13 @@
 {{- $title := partial "data/title" . -}}
 <title>{{ $title }}</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" type="text/css">
+
 <link rel='canonical' href='{{ .Permalink }}'>
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
 
 {{- partial "head/style.html" . -}}
 {{- partial "head/script.html" . -}}
