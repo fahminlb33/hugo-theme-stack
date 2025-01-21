@@ -5,8 +5,14 @@
     {{ $pag := .Paginate ($filtered) }}
 
     <section class="article-list">
-        {{ range $index, $element := $pag.Pages }}
-            {{ partial "article-list/default" . }}
+        {{ range $i, $e := $pag.Pages }}
+            {{ if lt $i 3 }}
+                {{ $e.Store.Set "lazyLoadImage" true }}
+            {{ else }}
+                {{ $e.Store.Set "lazyLoadImage" false }}
+            {{ end }}
+
+            {{ partial "article-list/default" $e }}
         {{ end }}
     </section>
 

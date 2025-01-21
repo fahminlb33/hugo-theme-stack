@@ -24,6 +24,8 @@
 {{ end }}
 
 {{ define "main" }}
+    {{ .Store.Set "lazyLoadImage" false }}
+    
     {{ partial "article/article.html" . }}
 
     {{ if .Params.links }}
