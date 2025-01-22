@@ -6,10 +6,10 @@
     </div>
     <h2 class="widget-title section-title">Langganan Email</h2>
 
-    <div id="mc_embed_shell" class="signup-form">
+    <div id="mc_embed_shell">
         <p class="signup-headline">Langganan ke email Kodesiana agar kamu selalu update dengan artikel baru</p>
 
-        <form method="post" action="https://kodesiana.us17.list-manage.com/subscribe/post?u=c9b6346f906dad1b1a2a309c1&id=5d20802ada&f_id=00bb6ae0f0">
+        <form class="signup-form widget" method="post" action="https://kodesiana.us17.list-manage.com/subscribe/post?u=c9b6346f906dad1b1a2a309c1&id=5d20802ada&f_id=00bb6ae0f0">
             <input type="hidden" name="tags" value="210674">
 
             <div aria-hidden="true" style="position: absolute; left: -5000px;">
@@ -18,7 +18,7 @@
 
             <div class="signup-field">
                 <input type="email" name="EMAIL" placeholder="Alamat email" required>
-                <input type="submit" name="subscribe" value="Subscribe">
+                <button type="submit" name="subscribe">{{ partial "helper/icon" "mail-plus" }}</button>
             </div>
         </form>
     </div>
