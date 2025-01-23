@@ -4,7 +4,7 @@
     <div class="widget-icon">
         {{ partial "helper/icon" "books" }}
     </div>
-    <h2 class="widget-title section-title">Series</h2>
+    <a href="{{ absURL "/series" }}"><h2 class="widget-title section-title">Series</h2></a>
 
     <div class="tagCloud-tags">
         {{ range first $limit $context.Site.Taxonomies.series.ByCount }}
