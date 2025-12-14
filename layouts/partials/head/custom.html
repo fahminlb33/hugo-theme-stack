@@ -21,30 +21,3 @@
 {{ with .Site.Params.integrations.googleSiteVerification }}
 <meta name="google-site-verification" content="{{ . }}" />
 {{ end }}
-
-<!-- Google AdSense -->
-{{ with .Site.Params.integrations.googleAdsense }}
-<script async data-ad-client="ca-pub-{{ . }}" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-{{ end }}
-
-<!-- Google Analytics -->
-{{ with .Site.Params.integrations.googleAnalytics }}
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    window.dataLayer.push(arguments);
-  }
-
-  gtag('js', new Date());
-  gtag('config', '{{ . }}');
-</script>
-{{ end }}
-
-<!-- Microsoft Clarity -->
-{{ with .Site.Params.integrations.microsoftClarity }}
-<script async src="https://www.clarity.ms/tag/{{ . }}"></script>
-<script>
-  window["clarity"] = window["clarity"] || function () { (window["clarity"].q = window["clarity"].q || []).push(arguments) };
-</script>
-{{ end }}
