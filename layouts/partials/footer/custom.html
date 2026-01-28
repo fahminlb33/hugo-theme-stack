@@ -34,3 +34,14 @@
         referrerpolicy="no-referrer" 
         onload="mermaid.initialize({ startOnLoad: true, theme: 'neutral' });"></script>
 {{ end }}
+
+<!-- Bokeh -->
+{{ if .Params.bokeh }}
+<script type="esms-options">{"shimMode": true}</script>
+<script type="text/javascript" src="https://cdn.holoviz.org/panel/1.8.6/dist/bundled/reactiveesm/es-module-shims@^1.10.0/dist/es-module-shims.min.js"></script>
+<script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-3.8.2.min.js"></script>
+<script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-gl-3.8.2.min.js"></script>
+<script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.8.2.min.js"></script>
+<script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.8.2.min.js"></script>
+<script type="text/javascript" src="https://cdn.holoviz.org/panel/1.8.6/dist/panel.min.js"></script>
+{{ end }}
